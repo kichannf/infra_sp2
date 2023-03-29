@@ -2,7 +2,7 @@ import os
 from datetime import timedelta
 from pathlib import Path
 
-from django.conf.global_settings import DATETIME_INPUT_FORMATS
+# from django.conf.global_settings import DATETIME_INPUT_FORMATS
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -119,7 +119,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media') 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
