@@ -5,6 +5,8 @@ from users.views import SignUp, UsersViewSet, get_token
 from .views import (CategoryViewSet, CommentViewSet, GenreViewSet,
                     ReviewViewSet, TitleViewSet)
 
+app_name = 'api'
+
 v1_router = DefaultRouter()
 
 v1_router.register(r'users', UsersViewSet, basename='users')
