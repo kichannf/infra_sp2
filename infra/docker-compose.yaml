@@ -3,11 +3,12 @@ version: '3.8'
 services:
   db:
     image: postgres:13.0-alpine
+    restart: always
     volumes:
-      - /var/lib/postgresql/data/
-    # адрес файла, где хранятся переменные окружения
+      - ./postgres-data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+
   web:
     build: ../api_yamdb
     restart: always
@@ -21,6 +22,7 @@ services:
 
   nginx:
     image: nginx:1.21.3-alpine
+    restart: always
     ports:
       - "80:80"
     volumes:
